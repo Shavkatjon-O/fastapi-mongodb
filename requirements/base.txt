@@ -1,3 +1,13 @@
+# Django
 django==5.0.6
+django-jazzmin==3.0.0
+django-rosetta==0.10.0
+django-modeltranslation==0.19.4
+django-ckeditor==6.6.1
 
 python-environ==0.4.54
+pillow==10.3.0
+sorl-thumbnail==12.10.0
+
+# Database
+psycopg2-binary==2.9.9
