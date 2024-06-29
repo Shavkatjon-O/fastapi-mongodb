@@ -20,6 +20,7 @@ DJANGO_APPS = [
 ]
 
 CUSTOM_APPS = [
+    "theme",
     "common",
     "competition",
     "confederation",
@@ -27,7 +28,10 @@ CUSTOM_APPS = [
     "kurash",
 ]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    "tailwind",
+    "django_browser_reload",
+]
 
 INSTALLED_APPS = DJANGO_APPS + CUSTOM_APPS + THIRD_PARTY_APPS
 
@@ -39,6 +43,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
@@ -99,3 +104,7 @@ MEDIA_URL = "media/"
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+TAILWIND_APP_NAME = "theme"
+
+INTERNAL_IPS = ("127.0.0.1",)
