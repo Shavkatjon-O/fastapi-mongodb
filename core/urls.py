@@ -10,8 +10,8 @@ from django.conf.urls.static import static
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("rosetta/", include("rosetta.urls")),
-    path("set_language/", set_language, name="set_language"),
     path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("language/", set_language, name="language"),
 ]
 
 urlpatterns += i18n_patterns()
