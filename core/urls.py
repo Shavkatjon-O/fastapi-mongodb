@@ -11,10 +11,12 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("rosetta/", include("rosetta.urls")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
-    path("language/", set_language, name="language"),
 ]
 
-urlpatterns += i18n_patterns()
+urlpatterns += i18n_patterns(
+    path("language/", set_language, name="language"),
+    path("", include("common.urls")),
+)
 
 if settings.DEBUG:
     urlpatterns += [path("__reload__/", include("django_browser_reload.urls"))]
