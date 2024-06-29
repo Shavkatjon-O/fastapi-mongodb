@@ -20,7 +20,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    command: gunicorn -c gunicorn_conf.py core.wsgi:application
+    command: gunicorn -c gunicorn_config.py core.wsgi:application
     security_opt:
       - seccomp:unconfined
     volumes:
