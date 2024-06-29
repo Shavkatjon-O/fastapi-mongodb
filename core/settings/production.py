@@ -2,9 +2,13 @@ from core.settings.base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "abkk-org.falconsoft.uz",
+]
 
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = [
+    "https://abkk-org.falconsoft.uz",
+]
 CSRF_COOKIE_SECURE = True
 
 DATABASES = {
