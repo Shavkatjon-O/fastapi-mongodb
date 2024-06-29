@@ -44,6 +44,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
     "django_browser_reload.middleware.BrowserReloadMiddleware",
+    "core.middleware.ErrorHandlerMiddleware",
 ]
 
 ROOT_URLCONF = "core.urls"
