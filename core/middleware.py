@@ -25,6 +25,7 @@ class ErrorHandlerMiddleware:
         if not settings.DEBUG:
             if exception:
                 message = (
+                    "**Project - abkk.org**\n\n"
                     "**Error time:** {error_time}\n\n"
                     "**Error message:** {error_message}\n\n"
                     "```python\n{error_traceback}\n```"
