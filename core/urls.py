@@ -7,10 +7,16 @@ from django.conf.urls.i18n import i18n_patterns
 from django.conf.urls.i18n import set_language
 from django.conf.urls.static import static
 
+
+def division_by_zero(request):
+    return 1 / 0
+
+
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("rosetta/", include("rosetta.urls")),
     path("ckeditor/", include("ckeditor_uploader.urls")),
+    path("error-handler/", division_by_zero),
 ]
 
 urlpatterns += i18n_patterns(
