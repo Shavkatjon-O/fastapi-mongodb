@@ -21,3 +21,6 @@ DATABASES = {
         "PORT": env.str("DB_PORT"),
     }
 }
+
+TELEGRAM_BOT_TOKEN = env.str("TELEGRAM_BOT_TOKEN")
+TELEGRAM_CHAT_ID = env.str("TELEGRAM_CHAT_ID")
